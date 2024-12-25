@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@layer utilities {
+  .width {
+    width: 1275px;
+  }
+  .scrollbar-hide {
+    /* Hide scrollbar */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+  }
+}
+
+@layer components {
+  .ssg {
+    @apply flex flex-row mt-1 mb-1 p-4 h-46.5 items-center gap-4 logo:gap-2 text-xl text-color rounded-full hover:bg-[#181818] hover:cursor-pointer;
+  }
+}
+
+/* Media queries for different screen heights */
+@layer components {
+  @media (max-height: 820px) {
+    .gapzero {
+      gap: 0px !important;
+    }
+  }
+  @media (max-height: 769px) {
+    .mxw-769 {
+      display: none; /* Hide element when screen height is under 769px */
+    }
+  }
+
+  @media (max-height: 718px) {
+    .mxw-718 {
+      display: none; /* Hide element when screen height is under 718px */
+    }
+  }
+
+  @media (max-height: 668px) {
+    .mxw-668 {
+      display: none; /* Hide element when screen height is under 668px */
+    }
+  }
+
+  @media (max-height: 618px) {
+    .mxw-618 {
+      display: none; /* Hide element when screen height is under 618px */
+    }
+  }
+
+  @media (max-height: 500px) {
+    .mxw-500 {
+      display: none; /* Hide element when screen height is under 500px */
+    }
+  }
+}
